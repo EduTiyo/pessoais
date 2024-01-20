@@ -7,7 +7,10 @@ def sortear(list, tamanho, qtdTimes):
     numRandom = random.randint(0, len(list)-1)
     time1.append(list[numRandom])
     list.pop(numRandom)
+  if len(list) == 1:
+    time1.append(list[0])
   return time1, list
+
 
 def main():
   list = []
