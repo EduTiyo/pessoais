@@ -20,7 +20,7 @@ vector<string> Pedido::getAcai(){
     return acai;
 }
 vector<string> Pedido::getAcompanhamento(){
-    cout << "selecione um acompanhamento" << endl;
+    cout << "selecione umk acompanhamento" << endl;
     for(int i = 0; i < acompanhamento.size(); ++i){
         cout << i+1 << " - " << acompanhamento[i] << endl;
     }
