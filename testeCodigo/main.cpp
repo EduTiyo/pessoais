@@ -16,7 +16,7 @@ int main(){
     pedido1.getAcai();
     pedido1.setAcai(acai);
     pedido1.getAcompanhamento();
-    pedido1.setAcompanhamento(acompanhamento);
+    pedido1.setAcompanhamento(acompanhamento, copo);
     pedido1.getAdicional();
     pedido1.setAdicional(adicional);
     pedido1.getCompra();

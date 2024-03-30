@@ -16,9 +16,9 @@ class Pedido{
         vector<string> getAdicional();
         vector<string> getCompra();
 
-        void setCopo(int copo);
+        void setCopo(int &copo);
         void setAcai(int acai);
-        void setAcompanhamento(int acompanhamento);
+        void setAcompanhamento(int acompanhamento, int copo);
         void setAdicional(int adicional);
 
 
