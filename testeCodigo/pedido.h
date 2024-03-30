@@ -9,9 +9,6 @@ class Pedido{
         vector<string> acompanhamento = {"morango", "leite em po", "banana"};
         vector<string> adicional = {"ouro branco", "nutella"};
         vector<string> compra;
-        void setCompra(vector<string> icompra){
-            this->compra = compra.push_back(icompra);
-        }
     public:
         vector<string> getCopo();
         vector<string> getAcai();

@@ -38,12 +38,55 @@ vector<string> Pedido::getAdicional(){
 vector<string> Pedido::getCompra(){
     cout << "sua compra:" << endl;
     for(int i = 0; i < compra.size(); ++i){
-        cout << i+1 << " - " << compra[i] << endl;
+        cout << "- " << compra[i] << endl;
     }
     return compra;
 }
 
-void Pedido::setCopo(int copo){
-    cin >> copo;
-    
+void Pedido::setCopo(int copoIndex){
+    cin >> copoIndex;
+    if (copoIndex <= copo.size() && copoIndex >= 1){
+        string copoSelecionado = copo[copoIndex - 1];
+        compra.push_back(copoSelecionado + "ml");
+    }else {
+        cout << "Opção inválida de copo\n";
+        setCopo(copoIndex);
+    }
+}
+
+void Pedido::setAcai(int acaiIndex){
+    cin >> acaiIndex;
+    if (acaiIndex <= acai.size() && acaiIndex >= 1){
+        string acaiSelecionado = acai[acaiIndex - 1];
+        compra.push_back(acaiSelecionado);
+    }else {
+        cout << "Opção inválida de açai\n";
+        setAcai(acaiIndex);
+    }
+}
+
+void Pedido::setAcompanhamento(int acompanhamentoIndex){
+    cout << "selecionte 0 para nenhum acompanhamento\n";
+    cin >> acompanhamentoIndex;
+    if (acompanhamentoIndex <= acompanhamento.size() && acompanhamentoIndex >= 1){
+        string acompanhamentoSelecionado = acompanhamento[acompanhamentoIndex - 1];
+        compra.push_back(acompanhamentoSelecionado);
+    }else {
+        cout << "Opção inválida de acompanhamento\n";
+        setAcompanhamento(acompanhamentoIndex);
+    }
+}
+
+void Pedido::setAdicional(int adicionalIndex){
+    cout << "selecionte 0 para nenhum adicional\n";
+    cin >> adicionalIndex;
+    if (adicionalIndex <= adicional.size() && adicionalIndex >= 1){
+        string adicionalSelecionado = adicional[adicionalIndex - 1];
+        compra.push_back(adicionalSelecionado);
+    }else if(adicionalIndex == 0){
+        cout << " " << endl;
+    }else{
+        cout << "Opção inválida de adicional\n";
+        setAdicional(adicionalIndex);
+    }
 }
