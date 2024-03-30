@@ -16,7 +16,7 @@ void openFile(){
         int i = 0;
         while(getline(myfile, line)){
             empID[i] = line.substr(0,3);
-            empName[i] = line.substr(4, 1 - 4);
+            empName[i] = line.substr(4, 1-4);
             i++;
         }
     }else{
@@ -48,7 +48,6 @@ void addRecord(){
     for(int i = 0; i < maxrow; i++){
         if (empID[i] == empno){
             cout << "ID already exists!\n";
-            system("pause");
             return;
         }
     }
